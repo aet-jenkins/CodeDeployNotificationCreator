@@ -1,9 +1,9 @@
 {
-    "Name": "CodedeployStatus",
+    "Name": "CodeDeployAlert-REPLACECODENAME",
     "EventTypeIds": [
         "codedeploy-application-deployment-failed"
     ],
-    "Resource": "arn:aws:codedeploy:us-east-1:455684304266:application:INC-CONLOY-HQO",
+    "Resource": "arn:aws:codedeploy:us-east-1:455684304266:application:REPLACECODENAME",
     "Targets": [
         {
             "TargetType": "SNS",

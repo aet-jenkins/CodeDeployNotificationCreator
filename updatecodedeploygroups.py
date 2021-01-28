@@ -19,12 +19,16 @@ for lines in line:
 
     fin = open("template.json", "rt")
     fout = open("dyno.json", "wt")
-    for line in fin:
-	    fout.write(line.replace('"Resource": "arn:aws:codedeploy:us-east-1:455684304266:application:",', '"Resource": "arn:aws:codedeploy:us-east-1:455684304266:application:'+app_name+'",\n'))
+    for line2 in fin:
+        
+        fout.write(line2.replace('REPLACECODENAME', app_name))
+	        
     fin.close()
     fout.close()
+    
     #os.system("aws deploy get-deployment-group --application-name " + app_name + " --deployment-group-name INC-DEV >> temp.json")
+    
     os.system("aws codestar-notifications create-notification-rule --cli-input-json  file://dyno.json --profile kavishka")
-
+    
     
 
