@@ -1,0 +1,15 @@
+{
+    "Name": "CodedeployStatus",
+    "EventTypeIds": [
+        "codedeploy-application-deployment-failed"
+    ],
+    "Resource": "arn:aws:codedeploy:us-east-1:455684304266:application:INC-CONLOY-HQO",
+    "Targets": [
+        {
+            "TargetType": "SNS",
+            "TargetAddress": "arn:aws:sns:us-east-1:455684304266:Codedeploy-notify"
+        }
+    ],
+    "Status": "ENABLED",
+    "DetailType": "FULL"
+}
